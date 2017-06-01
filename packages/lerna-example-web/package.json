@@ -1,5 +1,5 @@
 {
-  "name": "lerna-example-web",
+  "name": "@jlegrone/lerna-example-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,0 +1,18 @@
+{
+  "name": "@jlegrone/lerna-example-redux-lib",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlegrone/lerna-monorepo-example.git"
+  },
+  "author": "Jacob LeGrone <dev@jacoblegrone.com> (https://jacoblegrone.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlegrone/lerna-monorepo-example/issues"
+  },
+  "homepage": "https://github.com/jlegrone/lerna-monorepo-example#readme"
+}
