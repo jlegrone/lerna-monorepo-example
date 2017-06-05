@@ -1,21 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import cat from './cat.svg'
+import './App.css'
+import { fetchCatFacts } from '@jlegrone/lerna-example-redux-lib/src/actions'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="content">
+          <img
+            src={cat}
+            className={`App-logo ${this.props.facts.isFetching ? 'loading' : ''}`}
+            alt="logo"
+            style={{cursor: 'pointer'}}
+            onClick={() => this.props.dispatch(fetchCatFacts())}
+          />
+          <div className="facts">
+            {this.props.facts.list.map((fact, index) => <p key={index}>{fact}</p>)}
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  const { facts } = state
+
+  return {
+    facts,
+  }
+}
+
+export default connect(mapStateToProps)(App)
