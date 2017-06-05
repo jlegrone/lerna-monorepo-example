@@ -1,7 +1,6 @@
 {
   "name": "@jlegrone/lerna-example-redux-lib",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.1.0-alpha",
   "scripts": {
     "test": "echo \"No tests specified\""
   },
@@ -14,5 +13,9 @@
   "bugs": {
     "url": "https://github.com/jlegrone/lerna-monorepo-example/issues"
   },
-  "homepage": "https://github.com/jlegrone/lerna-monorepo-example#readme"
+  "homepage": "https://github.com/jlegrone/lerna-monorepo-example#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "redux": "^3.6.0"
+  }
 }
