@@ -4,9 +4,9 @@ import { REQUEST_FACTS, RECEIVE_FACTS } from './actions'
 function facts(state={ list: [], isFetching: false }, action) {
   switch (action.type) {
     case REQUEST_FACTS:
-      return Object.assign({}, state, { isFetching: true })
+      return { ...state, isFetching: true }
     case RECEIVE_FACTS:
-      return Object.assign({}, state, { isFetching: false, list: action.facts })
+      return { ...state, isFetching: false, list: action.facts }
     default:
       return state
   }
