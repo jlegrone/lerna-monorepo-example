@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "test:watch": "lerna run --parallel test:watch"
   },
   "devDependencies": {
     "lerna": "^2.0.0-rc.5"
