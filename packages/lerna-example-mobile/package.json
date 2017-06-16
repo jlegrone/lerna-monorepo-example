@@ -5,11 +5,15 @@
   "devDependencies": {
     "jest-expo": "~1.0.1",
     "react-native-scripts": "0.0.30",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-test-renderer": "16.0.0-alpha.6",
+    "wml": "0.0.82"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
+    "watch": "wml start",
+    "prewatch:add": "wml rm all && watchman watch-del-all",
+    "watch:add": "wml add ../lerna-example-redux-lib ./node_modules/@jlegrone/lerna-example-redux-lib",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -20,8 +24,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@jlegrone/lerna-example-redux-lib": "latest",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0"
+    "react-native": "^0.44.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   }
 }
