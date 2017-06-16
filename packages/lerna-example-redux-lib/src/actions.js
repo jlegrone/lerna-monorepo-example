@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'
+import { get } from 'axios'
 
 export const REQUEST_FACTS = 'REQUEST_FACTS'
 function requestFacts() {
@@ -18,8 +18,13 @@ function receiveFacts(facts) {
 export function fetchCatFacts(number=1) {
   return async function(dispatch) {
     dispatch(requestFacts())
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://catfacts-api.appspot.com/api/facts?number=${number}`)
-    const { facts } = await response.json()
-    dispatch(receiveFacts(facts))
+    const params = { number }
+    // cors-anywhere.herokuapp.com requires header to be set:
+    const headers = { 'x-requested-with': 'foo' }
+    const { data } = await get(
+      'https://cors-anywhere.herokuapp.com/https://catfacts-api.appspot.com/api/facts',
+      { params, headers }
+    )
+    dispatch(receiveFacts(data.facts))
   }
 }
