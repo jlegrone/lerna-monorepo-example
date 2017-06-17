@@ -1,23 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { Provider } from 'react-redux'
+import rootReducer from '@jlegrone/lerna-example-redux-lib/lib/reducers'
+import Home from './components/Home'
+
+const store = createStore(
+  rootReducer,
+  compose(applyMiddleware(thunkMiddleware))
+)
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+      <Provider store={store}>
+        <Home />
+      </Provider>
+    )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
