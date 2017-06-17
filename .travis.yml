@@ -1,20 +1,24 @@
 ---
 language: node_js
 node_js:
-  - "8.0.0"
+  - "8.1.0"
 
 sudo: false
 
 cache:
+  # yarn: true
   directories:
     - $HOME/.npm
 
 before_install:
-  - npm config set spin false
+  # - yarn add lerna
   - npm install lerna
 
 install:
-  - lerna bootstrap
+  # - yarn install
+  # - yarn packages:install
+  - lerna exec --parallel npm install
 
 script:
+  # - yarn test
   - npm test
