@@ -2,13 +2,12 @@
 # yarn lockfile v1
 
 
-"@jlegrone/lerna-example-redux-lib@^0.1.0-alpha.ce2395d2":
-  version "0.1.0-alpha.77f29bdc"
-  resolved "https://registry.yarnpkg.com/@jlegrone/lerna-example-redux-lib/-/lerna-example-redux-lib-0.1.0-alpha.77f29bdc.tgz#1dd1f7eb272e3e03c5d9629c00921c38858c57cb"
+"@jlegrone/lerna-example-redux-lib@^0.1.0-alpha.86dcf6f0":
+  version "0.1.0-alpha.86dcf6f0"
+  resolved "https://registry.yarnpkg.com/@jlegrone/lerna-example-redux-lib/-/lerna-example-redux-lib-0.1.0-alpha.86dcf6f0.tgz#30e78aa9aaa6118d732ae4e0c484e672dc2bbadb"
   dependencies:
     axios "^0.16.2"
     babel-runtime "^6.23.0"
-    fetch-ponyfill "^4.0.0"
     redux "^3.6.0"
 
 "@timer/detect-port@1.1.3":
@@ -2371,12 +2370,6 @@ fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fetch-ponyfill@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/fetch-ponyfill/-/fetch-ponyfill-4.0.0.tgz#18cfe38d69cde42aec71cb3ace79e1f2276293da"
-  dependencies:
-    node-fetch "~1.6.0"
-
 figures@^1.3.5:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-1.7.0.tgz#cbe1e3affcf1cd44b80cadfed28dc793a9701d2e"
@@ -3973,13 +3966,6 @@ no-case@^2.2.0:
 node-fetch@^1.0.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.1.tgz#899cb3d0a3c92f952c47f1b876f4c8aeabd400d5"
-  dependencies:
-    encoding "^0.1.11"
-    is-stream "^1.0.1"
-
-node-fetch@~1.6.0:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.6.3.tgz#dc234edd6489982d58e8f0db4f695029abcd8c04"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-preset-env": "^1.5.2",
     "jest-expo": "~1.0.1",
     "react-native-scripts": "0.0.30",
     "react-test-renderer": "16.0.0-alpha.6",
@@ -24,7 +25,8 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@jlegrone/lerna-example-redux-lib": "latest",
+    "@jlegrone/lerna-example-redux-lib": "0.1.0-alpha.86dcf6f0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0",

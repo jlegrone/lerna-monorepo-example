@@ -6,8 +6,7 @@
         "browsers": ["last 2 versions", "safari 7"],
         "node": "current"
       },
-      "useBuiltIns": true,
-      "modules": false
+      "useBuiltIns": true
     }]
   ],
   "sourceMaps": "inline"
