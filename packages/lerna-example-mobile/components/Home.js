@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, Image, ListView, RefreshControl } from 'react-native'
+import { StyleSheet, Text, View, Image, ListView, RefreshControl } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchCatFacts } from '@jlegrone/lerna-example-redux-lib/lib/actions'
 import cat from '../images/cat.png'
@@ -7,6 +7,7 @@ import cat from '../images/cat.png'
 const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
+    marginTop: 30
   },
   row: {
     marginLeft: 5,
@@ -29,8 +30,13 @@ const styles = StyleSheet.create({
 const NUM_FACTS = 1
 
 class Home extends React.Component {
+  constructor() {
+    super(...arguments)
+    this.fetch = () => this.props.dispatch(fetchCatFacts(NUM_FACTS))
+  }
+
   componentDidMount() {
-    this.props.dispatch(fetchCatFacts(NUM_FACTS))
+    this.fetch()
   }
 
   render() {
@@ -41,11 +47,11 @@ class Home extends React.Component {
         refreshControl={
           <RefreshControl
             refreshing={this.props.isFetching}
-            onRefresh={() => this.props.dispatch(fetchCatFacts(NUM_FACTS))}
+            onRefresh={this.fetch}
           />
         }
         dataSource={ds.cloneWithRows(this.props.list)}
-        renderHeader={() => <View style={styles.header}><Image source={cat} /></View>}
+        renderHeader={() => <View key="cat" style={styles.header}><Image source={cat} /></View>}
         renderRow={fact => <Text style={styles.row}>{fact}</Text>}
         renderSeparator={(_, index) => <View style={styles[index < NUM_FACTS-1 ? 'separator-lined' : 'separator-unlined']} />}
         enableEmptySections={true}
