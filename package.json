@@ -10,11 +10,17 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@jlegrone/lerna-example-redux-lib": "0.1.0-alpha.86dcf6f0",
+		"babel-plugin-transform-runtime": "^6.23.0",
 		"react": "16.0.0-alpha.12",
-		"react-native-macos": "0.14.0"
+		"react-native-macos": "0.14.0",
+		"react-redux": "^5.0.5",
+		"redux": "^3.7.0",
+		"redux-thunk": "^2.2.0"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
+		"babel-preset-env": "^1.5.2",
 		"babel-preset-react-native": "2.0.0",
 		"jest": "20.0.4",
 		"react-test-renderer": "16.0.0-alpha.12"
