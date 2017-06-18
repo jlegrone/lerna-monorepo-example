@@ -1,0 +1,37 @@
+{
+  "name": "@jlegrone/lerna-example-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2",
+    "jest-expo": "~1.0.1",
+    "react-native-scripts": "0.0.30",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "wml": "0.0.82"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "watch": "wml start",
+    "prewatch:add": "wml rm all && watchman watch-del-all",
+    "watch:add": "wml add ../lerna-example-redux-lib ./node_modules/@jlegrone/lerna-example-redux-lib",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@jlegrone/lerna-example-redux-lib": "0.1.0-alpha.86dcf6f0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "expo": "^17.0.0",
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  }
+}

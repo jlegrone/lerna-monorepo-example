@@ -1,0 +1,25 @@
+---
+language: node_js
+node_js:
+  - "8.1.0"
+
+sudo: false
+
+cache:
+  yarn: true
+  directories:
+    - $HOME/.npm
+
+env:
+  - PACKAGE_NAME=lerna-example-redux-lib
+  - PACKAGE_NAME=lerna-example-mobile
+  - PACKAGE_NAME=lerna-example-web
+
+before_install:
+  - cd ./packages/$PACKAGE_NAME
+
+install:
+  - yarn install --pure-lockfile
+
+script:
+  - yarn test
