@@ -4,10 +4,9 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native-macos/local-cli/cli.js start",
-		"ios": "react-native run-ios",
-		"android": "react-native run-android",
-		"macos": "react-native-macos run-macos",
-		"test": "jest"
+		"macos": "open macos/LernaExampleMacOS.xcodeproj && npm start",
+		"test": "jest --coverage",
+		"test:watch": "jest --watch"
 	},
 	"dependencies": {
 		"@jlegrone/lerna-example-redux-lib": "0.1.0-alpha.86dcf6f0",
