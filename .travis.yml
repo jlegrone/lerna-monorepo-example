@@ -13,6 +13,7 @@ cache:
 env:
   - PACKAGE_NAME=lerna-example-redux-lib
   - PACKAGE_NAME=lerna-example-mobile
+  - PACKAGE_NAME=lerna-example-macos
   - PACKAGE_NAME=lerna-example-web
 
 before_install:
