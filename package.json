@@ -6,6 +6,6 @@
     "packages:install": "lerna exec --parallel yarn install --pure-lockfile --production=false"
   },
   "devDependencies": {
-    "lerna": "^2.0.0-rc.5"
+    "lerna": "^2.0.0"
   }
 }
