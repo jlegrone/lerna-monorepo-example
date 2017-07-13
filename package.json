@@ -3,7 +3,7 @@
     "watch": "lerna run --parallel watch",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
-    "packages:install": "lerna exec --parallel yarn install --pure-lockfile --production=false"
+    "postinstall": "lerna bootstrap --hoist"
   },
   "devDependencies": {
     "lerna": "^2.0.0"
