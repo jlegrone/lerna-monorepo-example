@@ -1,5 +1,5 @@
 {
-	"name": "lerna-example-mac-os",
+	"name": "@jlegrone/lerna-example-mac-os",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
