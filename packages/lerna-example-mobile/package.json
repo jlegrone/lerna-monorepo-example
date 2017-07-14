@@ -25,7 +25,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@jlegrone/lerna-example-redux-lib": "0.1.0-alpha.86dcf6f0",
+    "@jlegrone/lerna-example-redux-lib": "^0.1.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",

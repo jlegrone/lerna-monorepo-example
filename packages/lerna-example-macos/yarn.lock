@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@jlegrone/lerna-example-redux-lib@0.1.0-alpha.86dcf6f0":
-  version "0.1.0-alpha.86dcf6f0"
-  resolved "https://registry.yarnpkg.com/@jlegrone/lerna-example-redux-lib/-/lerna-example-redux-lib-0.1.0-alpha.86dcf6f0.tgz#30e78aa9aaa6118d732ae4e0c484e672dc2bbadb"
+"@jlegrone/lerna-example-redux-lib@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@jlegrone/lerna-example-redux-lib/-/lerna-example-redux-lib-0.1.0.tgz#29f91c9630ac99d1de815da9ba7140b63fc39df9"
   dependencies:
     axios "^0.16.2"
     babel-runtime "^6.23.0"
