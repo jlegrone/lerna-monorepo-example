@@ -9,6 +9,12 @@ $ yarn install
 
 See README from `packages/<package-name>` to run individual projects.
 
+To explore commands available through [lerna](https://github.com/lerna/lerna/):
+
+```
+$ yarn lerna
+```
+
 ## Testing
 To run tests on file changes across all packages (at project root):
 ```

@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lerna": "lerna-wizard",
     "watch": "lerna run --parallel watch",
     "release": "lerna publish --conventional-commits",
     "test": "lerna run test",
@@ -7,6 +8,7 @@
     "postinstall": "lerna bootstrap --hoist"
   },
   "devDependencies": {
-    "lerna": "^2.0.0"
+    "lerna": "^2.0.0",
+    "lerna-wizard": "^1.0.9"
   }
 }
