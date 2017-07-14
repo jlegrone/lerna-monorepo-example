@@ -1,6 +1,6 @@
 {
   "name": "@jlegrone/lerna-example-redux-lib",
-  "version": "0.1.0-alpha.ce2395d2",
+  "version": "0.1.0",
   "scripts": {
     "test": "echo \"No tests specified\"",
     "prepublish": "babel src --out-dir lib",
