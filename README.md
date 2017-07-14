@@ -1,15 +1,23 @@
-# lerna-monorepo-example (WIP)
+# lerna-monorepo-example
 
 [![Build Status](https://travis-ci.org/jlegrone/lerna-monorepo-example.svg?branch=master)](https://travis-ci.org/jlegrone/lerna-monorepo-example)
 
 ## Getting Started
-1. Install latest node (8.1.0)
-2. `npm install lerna --global`
-3. `lerna bootstrap`
+```
+$ yarn install
+```
 
-See README from `/packages/<package-name>` to run individual projects.
+See README from `packages/<package-name>` to run individual projects.
 
 ## Testing
-- To run all tests: `lerna run test` (from any directory in project)
-- To re-run tests for file changes across all packages: `yarn test:watch` (at project root)
-- To run tests for specific package: `cd packages/<package-name> && yarn test`
+To run tests on file changes across all packages (at project root):
+```
+$ yarn test:watch
+```
+
+To run tests for specific package:
+
+```
+$ cd packages/<package-name>
+$ yarn test
+```
