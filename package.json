@@ -36,7 +36,7 @@
       "maxSubjectLength": 100,
       "subjectPattern": ".+",
       "subjectPatternErrorMsg": "subject does not match subject pattern!",
-      "helpMessage": "",
+      "helpMessage": "\nTry running `yarn commit` for help.",
       "autoFix": true
     }
   },
