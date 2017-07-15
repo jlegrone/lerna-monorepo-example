@@ -1,5 +1,11 @@
 {
   "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    },
     "validate-commit-msg": {
       "types": [
         "feat",
@@ -35,6 +41,7 @@
     }
   },
   "scripts": {
+    "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
     "learna": "lerna-wizard",
     "lerna": "lerna",
@@ -45,6 +52,9 @@
     "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "cz-customizable": "^5.0.0",
     "husky": "^0.14.3",
     "lerna": "^2.0.0",
     "lerna-wizard": "^1.0.9",
