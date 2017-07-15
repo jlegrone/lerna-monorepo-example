@@ -46,26 +46,26 @@ const types = [
   }
 ].filter(type => typeSet.has(type.value))
 
-const scopes = scope.allowed.map(name => ({ name }))
+
+const filteredScopes = new Set(['npm'])
+const scopes = scope.allowed
+  .filter(name => !filteredScopes.has(name))
+  .map(name => ({ name }))
 
 module.exports = {
-
   types,
   scopes,
-
-  // it needs to match the value for field type. Eg.: 'fix'
-  /*
   scopeOverrides: {
-    fix: [
-      {name: 'merge'},
-      {name: 'style'},
-      {name: 'e2eTest'},
-      {name: 'unitTest'}
+    chore: [
+      ...scopes,
+      { name: 'npm' }
     ]
   },
-  */
-
   allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix', 'perf', 'refactor']
-
+  allowBreakingChanges: [
+    'feat',
+    'fix',
+    'perf',
+    'refactor'
+  ]
 }
