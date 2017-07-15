@@ -1,14 +1,53 @@
 {
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "scope": {
+        "required": true,
+        "allowed": [
+          "macos",
+          "mobile",
+          "redux-lib",
+          "repo",
+          "web"
+        ],
+        "validate": true,
+        "multiple": true
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "",
+      "autoFix": true
+    }
+  },
   "scripts": {
-    "lerna": "lerna-wizard",
-    "watch": "lerna run --parallel watch",
+    "commitmsg": "validate-commit-msg",
+    "learna": "lerna-wizard",
+    "lerna": "lerna",
+    "postinstall": "lerna bootstrap --hoist",
     "release": "lerna publish --conventional-commits",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
-    "postinstall": "lerna bootstrap --hoist"
+    "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
     "lerna": "^2.0.0",
-    "lerna-wizard": "^1.0.9"
+    "lerna-wizard": "^1.0.9",
+    "validate-commit-msg": "^2.12.2"
   }
 }
