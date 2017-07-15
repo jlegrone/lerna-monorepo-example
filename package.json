@@ -1,4 +1,17 @@
 {
+  "name": "@jlegrone/lerna-monorepo-example",
+  "description": "Develop node modules inside a monorepo with lerna and conventional commits.",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlegrone/lerna-monorepo-example.git"
+  },
+  "author": "Jacob LeGrone <dev@jacoblegrone.com> (https://jacoblegrone.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlegrone/lerna-monorepo-example/issues"
+  },
+  "homepage": "https://github.com/jlegrone/lerna-monorepo-example#readme",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
