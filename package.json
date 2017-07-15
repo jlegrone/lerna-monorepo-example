@@ -23,11 +23,11 @@
       "scope": {
         "required": true,
         "allowed": [
-          "macos",
-          "mobile",
           "redux-lib",
-          "repo",
-          "web"
+          "web",
+          "mobile",
+          "macos",
+          "repo"
         ],
         "validate": true,
         "multiple": true
