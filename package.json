@@ -40,7 +40,8 @@
           "web",
           "mobile",
           "macos",
-          "repo"
+          "repo",
+          "npm"
         ],
         "validate": true,
         "multiple": true
@@ -59,7 +60,7 @@
     "learna": "lerna-wizard",
     "lerna": "lerna",
     "postinstall": "lerna bootstrap --hoist",
-    "release": "lerna publish --conventional-commits",
+    "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
     "watch": "lerna run --parallel watch"
