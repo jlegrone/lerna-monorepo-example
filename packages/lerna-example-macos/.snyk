@@ -1,0 +1,35 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:ms:20170412':
+    - react-native-macos > connect > compression > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > connect-timeout > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > express-session > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > morgan > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > serve-index > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > finalhandler > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > body-parser > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > connect-timeout > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > serve-static > send > debug > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > serve-static > send > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > serve-favicon > ms:
+        patched: '2017-08-04T02:40:24.842Z'
+  'npm:negotiator:20160616':
+    - react-native-macos > connect > compression > accepts > negotiator:
+        patched: '2017-08-04T02:40:24.842Z'
+    - react-native-macos > connect > serve-index > accepts > negotiator:
+        patched: '2017-08-04T02:40:24.842Z'
