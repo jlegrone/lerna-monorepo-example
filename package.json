@@ -59,10 +59,11 @@
     "commitmsg": "validate-commit-msg",
     "learna": "lerna-wizard",
     "lerna": "lerna",
-    "postinstall": "lerna bootstrap --hoist",
+    "postinstall": "lerna bootstrap && npm run ugly-ugly-hack",
     "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
+    "ugly-ugly-hack": "lerna exec --parallel --bail false --ignore @jlegrone/lerna-example-web -- rm \"./node_modules/@jlegrone/lerna-example-redux-lib/.babelrc\"",
     "watch": "lerna run --parallel watch"
   },
   "devDependencies": {

@@ -6,28 +6,23 @@
     "babel-preset-env": "^1.5.2",
     "jest-expo": "~1.0.1",
     "react-native-scripts": "0.0.30",
-    "react-test-renderer": "16.0.0-alpha.6",
-    "wml": "0.0.82"
+    "react-test-renderer": "16.0.0-alpha.6"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
-    "watch": "wml start",
-    "prewatch:add": "wml rm all && watchman watch-del-all",
-    "watch:add": "wml add ../lerna-example-redux-lib ./node_modules/@jlegrone/lerna-example-redux-lib",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --coverage",
     "test:watch": "node node_modules/jest/bin/jest.js --watch",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "snyk-protect": "snyk protect"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@jlegrone/lerna-example-redux-lib": "^0.1.0",
+    "@jlegrone/lerna-example-redux-lib": "file:../lerna-example-redux-lib",
     "babel-plugin-transform-runtime": "^6.23.0",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
