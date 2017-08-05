@@ -43,7 +43,7 @@
           "repo",
           "npm"
         ],
-        "validate": true,
+        "validate": false,
         "multiple": true
       },
       "warnOnFail": false,
