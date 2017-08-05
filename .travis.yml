@@ -20,8 +20,8 @@ env:
 
 before_install:
   - npm install --global yarn@0.27.5
-  - cd ./packages/lerna-example-redux-lib && yarn install && yarn prepublish
-  - cd ../$PACKAGE_NAME
+  - yarn setup
+  - cd ./packages/$PACKAGE_NAME
 
 install:
   - yarn install --pure-lockfile
