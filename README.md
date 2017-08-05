@@ -4,7 +4,7 @@
 
 ## Getting Started
 ```
-$ yarn install
+$ yarn bootstrap
 ```
 
 See README from `packages/<package-name>` to run individual projects.

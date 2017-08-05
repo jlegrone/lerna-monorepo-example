@@ -55,6 +55,7 @@
     }
   },
   "scripts": {
+    "bootstrap": "yarn setup && yarn install",
     "cleanup": "lerna clean --yes",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
@@ -62,6 +63,7 @@
     "lerna": "lerna",
     "postinstall": "lerna bootstrap && npm run ugly-ugly-hack",
     "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
+    "setup": "./scripts/setup.sh",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
     "ugly-ugly-hack": "lerna exec --parallel --bail false --ignore @jlegrone/lerna-example-web -- rm \"./node_modules/@jlegrone/lerna-example-redux-lib/.babelrc\"",
