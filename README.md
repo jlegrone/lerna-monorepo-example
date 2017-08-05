@@ -43,3 +43,14 @@ To run tests for specific package:
 $ cd packages/<package-name>
 $ yarn test
 ```
+
+## Available Package Scripts
+
+| Name | Description |
+|------|-------------|
+|`bootstrap`|Pre-transpile module(s) and execute `lerna bootstrap`|
+|`cleanup`|Remove `node_modules` within each package directory|
+|`commit`|Open an interactive dialogue to generate a conventional commit message|
+|`learna`|Start the lerna wizard|
+|`release`|Generate changelogs and publish new package versions|
+|`watch`|Transpile module(s) on file system changes|
