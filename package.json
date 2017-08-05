@@ -55,6 +55,7 @@
     }
   },
   "scripts": {
+    "cleanup": "lerna clean --yes",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
     "learna": "lerna-wizard",
