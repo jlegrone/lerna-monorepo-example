@@ -17,48 +17,14 @@
       "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": ".cz-config.js"
-    },
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "build",
-        "ci",
-        "chore",
-        "revert"
-      ],
-      "scope": {
-        "required": true,
-        "allowed": [
-          "redux-lib",
-          "web",
-          "mobile",
-          "macos",
-          "repo",
-          "npm"
-        ],
-        "validate": false,
-        "multiple": true
-      },
-      "warnOnFail": false,
-      "maxSubjectLength": 100,
-      "subjectPattern": ".+",
-      "subjectPatternErrorMsg": "subject does not match subject pattern!",
-      "helpMessage": "\nTry running `yarn commit` for help.",
-      "autoFix": true
+      "config": "commitizen.config.js"
     }
   },
   "scripts": {
     "bootstrap": "yarn setup && yarn install",
     "cleanup": "lerna clean --yes",
     "commit": "git-cz",
-    "commitmsg": "validate-commit-msg",
+    "commitmsg": "commitlint -e",
     "learna": "lerna-wizard",
     "lerna": "lerna",
     "postinstall": "lerna bootstrap && npm run ugly-ugly-hack",
@@ -70,11 +36,12 @@
     "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
+    "@commitlint/cli": "^3.0.4",
+    "@commitlint/config-angular": "^3.0.4",
     "commitizen": "^2.9.6",
     "cz-customizable": "^5.0.0",
     "husky": "^0.14.3",
     "lerna": "^2.0.0",
-    "lerna-wizard": "^1.0.9",
-    "validate-commit-msg": "^2.12.2"
+    "lerna-wizard": "^1.0.9"
   }
 }
