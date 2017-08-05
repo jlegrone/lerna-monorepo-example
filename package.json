@@ -55,6 +55,7 @@
     }
   },
   "scripts": {
+    "bootstrap": "yarn setup && yarn install",
     "cleanup": "lerna clean --yes",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
