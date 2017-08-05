@@ -15,16 +15,16 @@ function receiveFacts(facts) {
   }
 }
 
-export function fetchCatFacts(number=1) {
+export function fetchCatFacts(limit=1) {
   return async function(dispatch) {
     dispatch(requestFacts())
-    const params = { number }
+    const params = { limit }
     // cors-anywhere.herokuapp.com requires header to be set:
     const headers = { 'x-requested-with': 'foo' }
     const { data } = await get(
-      'https://cors-anywhere.herokuapp.com/https://catfacts-api.appspot.com/api/facts',
+      'https://cors-anywhere.herokuapp.com/https://catfact.ninja/facts',
       { params, headers }
     )
-    dispatch(receiveFacts(data.facts))
+    dispatch(receiveFacts(data.data.map(item => item.fact)))
   }
 }
