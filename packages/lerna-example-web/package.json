@@ -1,9 +1,9 @@
 {
   "name": "@jlegrone/lerna-example-web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
-    "@jlegrone/lerna-example-redux-lib": "^0.1.0",
+    "@jlegrone/lerna-example-redux-lib": "^0.1.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
