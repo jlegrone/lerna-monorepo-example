@@ -7,8 +7,6 @@ sudo: false
 
 cache:
   yarn: true
-  directories:
-    - $HOME/.npm
 
 matrix:
   allow_failures:
@@ -21,7 +19,9 @@ env:
   - PACKAGE_NAME=lerna-example-web
 
 before_install:
-  - cd ./packages/$PACKAGE_NAME
+  - npm install --global yarn@0.27.5
+  - cd ./packages/lerna-example-redux-lib && yarn install && yarn prepublish
+  - cd ../$PACKAGE_NAME
 
 install:
   - yarn install --pure-lockfile
