@@ -30,8 +30,8 @@
     "postinstall": "lerna bootstrap && npm run ugly-ugly-hack",
     "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "setup": "./scripts/setup.sh",
-    "test": "lerna run test",
-    "test:watch": "lerna run --parallel test:watch",
+    "test": "jest --projects packages/* --env=jsdom --coverage",
+    "test:watch": "yarn test -- --watch --coverage false",
     "ugly-ugly-hack": "lerna exec --parallel --bail false --ignore @jlegrone/lerna-example-web -- rm \"./node_modules/@jlegrone/lerna-example-redux-lib/.babelrc\"",
     "watch": "lerna run --parallel watch"
   },
@@ -41,6 +41,7 @@
     "commitizen": "^2.9.6",
     "cz-customizable": "^5.0.0",
     "husky": "^0.14.3",
+    "jest": "^20.0.4",
     "lerna": "^2.0.0",
     "lerna-wizard": "^1.0.9"
   }
