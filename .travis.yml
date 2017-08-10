@@ -8,10 +8,6 @@ sudo: false
 cache:
   yarn: true
 
-matrix:
-  allow_failures:
-    - env: PACKAGE_NAME=lerna-example-macos
-
 env:
   - PACKAGE_NAME=lerna-example-redux-lib
   - PACKAGE_NAME=lerna-example-mobile
