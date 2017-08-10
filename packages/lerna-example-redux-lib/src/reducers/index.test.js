@@ -4,4 +4,4 @@ const initialState = rootReducer({}, {})
 
 test('generates correct initial state', () => {
   expect(initialState).toMatchSnapshot();
-});
+})

@@ -22,6 +22,7 @@
   "jest": {
     "rootDir": "src"
   },
+  "testEnvironment": "browser",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-runtime": "^6.23.0",
