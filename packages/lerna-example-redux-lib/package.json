@@ -1,6 +1,6 @@
 {
   "name": "@jlegrone/lerna-example-redux-lib",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
     "test": "jest --coverage",

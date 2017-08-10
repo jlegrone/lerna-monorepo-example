@@ -1,6 +1,6 @@
 {
   "name": "@jlegrone/lerna-example-mac-os",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native-macos/local-cli/cli.js start",
