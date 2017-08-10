@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, ListView, RefreshControl } from 'react-native'
 import { connect } from 'react-redux'
-import { fetchCatFacts } from '@jlegrone/lerna-example-redux-lib/lib/actions'
+import fetchCatFacts from '@jlegrone/lerna-example-redux-lib/lib/actions/fetchCatFacts'
 
 const styles = StyleSheet.create({
   container: {

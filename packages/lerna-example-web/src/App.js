@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import cat from './cat.svg'
 import './App.css'
-import { fetchCatFacts } from '@jlegrone/lerna-example-redux-lib/lib/actions'
+import fetchCatFacts from '@jlegrone/lerna-example-redux-lib/lib/actions/fetchCatFacts'
 
 class App extends Component {
   render() {
