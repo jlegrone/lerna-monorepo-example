@@ -2,22 +2,26 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, ListView, RefreshControl } from 'react-native'
 import { connect } from 'react-redux'
 import fetchCatFacts from '@jlegrone/lerna-example-redux-lib/lib/actions/fetchCatFacts'
-import cat from '../images/cat.png'
+import logo from '../images/cat.png'
 
 const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 30,
+  },
+  headerImage: {
+    height: 150,
   },
   row: {
     marginLeft: 5,
     marginRight: 5,
   },
   'separator-lined': {
-      height: StyleSheet.hairlineWidth,
-      backgroundColor: '#8E8E8E',
-      marginTop: 10,
-      marginBottom: 10,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: '#8E8E8E',
+    marginTop: 10,
+    marginBottom: 10,
   },
   'separator-unlined': {
     height: StyleSheet.hairlineWidth,
@@ -51,7 +55,9 @@ class Home extends React.Component {
           />
         }
         dataSource={ds.cloneWithRows(this.props.list)}
-        renderHeader={() => <View key="cat" style={styles.header}><Image source={cat} /></View>}
+        renderHeader={() => <View key="logo" style={styles.header}>
+          <Image source={logo} style={styles.headerImage} resizeMode='contain' />
+        </View>}
         renderRow={fact => <Text style={styles.row}>{fact}</Text>}
         renderSeparator={(_, index) => <View style={styles[index < NUM_FACTS-1 ? 'separator-lined' : 'separator-unlined']} />}
         enableEmptySections={true}
