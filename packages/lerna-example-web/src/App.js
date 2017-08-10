@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import cat from './cat.svg'
+import logo from './cat.svg'
 import './App.css'
 import fetchCatFacts from '@jlegrone/lerna-example-redux-lib/lib/actions/fetchCatFacts'
 
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <div className="content">
           <img
-            src={cat}
+            src={logo}
             className={`App-logo ${this.props.facts.isFetching ? 'loading' : ''}`}
             alt="logo"
             style={{cursor: 'pointer'}}
