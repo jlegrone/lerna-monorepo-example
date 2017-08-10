@@ -53,4 +53,5 @@ $ yarn test
 |`commit`|Open an interactive dialogue to generate a conventional commit message|
 |`learna`|Start the lerna wizard|
 |`release`|Generate changelogs and publish new package versions|
+|`start`|Run `yarn start` in each package in parallel|
 |`watch`|Transpile module(s) on file system changes|

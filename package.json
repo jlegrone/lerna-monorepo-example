@@ -30,6 +30,7 @@
     "postinstall": "lerna bootstrap && npm run ugly-ugly-hack",
     "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "setup": "./scripts/setup.sh",
+    "start": "lerna run --parallel start",
     "test": "jest --projects packages/* --env=jsdom --coverage",
     "test:watch": "yarn test -- --watch --coverage false",
     "ugly-ugly-hack": "lerna exec --parallel --bail false --ignore @jlegrone/lerna-example-web -- rm \"./node_modules/@jlegrone/lerna-example-redux-lib/.babelrc\"",

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns correct value 1`] = `
+Object {
+  "facts": Array [
+    "test one",
+    "test two",
+  ],
+  "type": "RECEIVE_FACTS",
+}
+`;
