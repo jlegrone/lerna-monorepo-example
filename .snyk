@@ -1,0 +1,24 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - react-native-macos > connect > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > express-session > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > finalhandler > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > morgan > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > serve-index > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > body-parser > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > compression > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > connect-timeout > debug:
+        patched: '2017-09-29T22:02:15.036Z'
+    - react-native-macos > connect > serve-static > send > debug:
+        patched: '2017-09-29T22:02:15.036Z'
